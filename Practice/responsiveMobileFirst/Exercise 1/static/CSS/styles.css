@@ -1,0 +1,42 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: firebrick;
+  /* text-align: center; */
+}
+
+nav {
+  background: rgb(46, 33, 33);
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav ul li {
+  list-style-type: none;
+  font-size: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(204, 203, 203);
+}
+
+nav a:hover {
+  background: #777;
+}
+
+#logo {
+  font-size: 2.7rem;
+}
+
+.bars {
+  color: white;
+}
