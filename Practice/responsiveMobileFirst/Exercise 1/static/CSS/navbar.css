@@ -1,0 +1,197 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  --navColor: rgb(214, 214, 214);
+}
+body {
+  background: teal;
+  text-align: center;
+}
+nav {
+  background: #222;
+  font-size: large;
+}
+nav .logo {
+  font-size: xx-large;
+  padding: 14px 18px;
+  text-transform: uppercase;
+}
+nav .logo a {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+nav .logo a:active {
+  color: #999;
+}
+.menu a {
+  text-decoration: none;
+  color: var(--navColor);
+  padding: 15px 0px;
+  width: 100%;
+}
+.nav-item a {
+  display: block;
+  color: rgb(207, 196, 131);
+}
+.nav-item a:hover {
+  color: rgb(255, 255, 255);
+}
+nav .menu {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul li:not(.logo) {
+  width: 100%;
+}
+
+/* menu button styling start */
+#menubutton {
+  display: block;
+  width: fit-content;
+  padding: 11px 9px;
+  border-radius: 10%;
+  order: 1;
+  border: 1px #222 solid;
+}
+#menubutton div {
+  height: 4px;
+  width: 35px;
+  background: var(--navColor);
+  margin: 6px;
+  border-radius: 50em;
+}
+#menubutton:hover {
+  cursor: pointer;
+  color: rgb(251, 255, 252);
+  background: teal;
+}
+/* #menubutton:active {
+  background: #333;
+  border-color: teal;
+} */
+#menubutton {
+  margin-right: 5px;
+}
+/* menu button styling end */
+
+/* mobile menu */
+.logo {
+  order: 0;
+}
+.nav-item.home,
+.button.primary {
+  border-top: 1px grey solid;
+}
+.nav-item a:active {
+  background: teal;
+}
+.nav-item {
+  order: 4;
+}
+.nav-item.active {
+  /* property to change when menu button is clicked */
+  display: block;
+}
+.button.primary {
+  order: 2;
+}
+.button.secondary {
+  order: 3;
+}
+
+/* tablet menu */
+@media (min-width: 520px) {
+  nav .menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  nav .menu .logo {
+    margin-right: auto;
+  }
+  nav .menu .logo {
+    order: 0;
+  }
+  .button.primary,
+  .button.secondary {
+    order: 1;
+    width: auto;
+    border: none;
+    padding: 0px 8px;
+    display: block;
+  }
+  #menubutton {
+    order: 2;
+  }
+  .nav-item:not(.button) {
+    order: 3;
+  }
+  .button a {
+    padding: 9px 17px;
+    background-color: teal;
+    border-radius: 50em;
+    border: 1px teal solid;
+  }
+  .button.secondary a {
+    background: transparent;
+  }
+  .button.primary a:hover {
+    color: rgb(251, 255, 252);
+  }
+  .button.primary a:active {
+    background: rgb(0, 153, 153);
+  }
+  .button.secondary a:hover {
+    color: rgb(251, 255, 252);
+  }
+  .button.secondary a:active {
+    border: 1px rgb(0, 206, 206) solid;
+  }
+}
+
+/* Desktop menu/navbar */
+@media (max-width: 809px) {
+  .nav-item {
+    display: none;
+  }
+}
+@media (min-width: 810px) {
+  #menubutton {
+    display: none;
+  }
+  .nav-item.active {
+    display: block;
+  }
+  nav .menu .logo {
+    margin-right: 0px;
+  }
+  nav .menu .about {
+    margin-right: auto;
+  }
+  .logo {
+    order: 0;
+  }
+  .nav-item:not(.button) {
+    order: 1;
+    border-top: none;
+  }
+  .button {
+    order: 2;
+  }
+  .button.secondary {
+    margin-right: 7px;
+  }
+  nav ul li:not(.logo) {
+    width: auto;
+    padding: 0px 15px;
+  }
+  .nav-item:not(.button) a:active {
+    background: none;
+    text-decoration: underline;
+  }
+}

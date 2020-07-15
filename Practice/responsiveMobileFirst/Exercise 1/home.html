@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./static/CSS/navbar.css" />
+
+    <script>
+      // function to toggle the menu on mobile and tablet
+      function menuToggle() {
+        var navItems = document.querySelectorAll(".nav-item");
+        var navItemsLength = navItems.length;
+        if (navItems[0].classList.contains("active")) {
+          for (let i = 0; i < navItemsLength; i++) {
+            navItems[i].classList.remove("active");
+          }
+        } else {
+          for (let i = 0; i < navItemsLength; i++) {
+            navItems[i].classList.add("active");
+          }
+        }
+      }
+      // function to collapse the menu when user clicks elsewhere than on menu
+      function menuCollapse() {
+        var navItems = document.querySelectorAll(".nav-item");
+        var navItemsLength = navItems.length;
+        if (navItems[0].classList.contains("active")) {
+          for (let i = 0; i < navItemsLength; i++) {
+            navItems[i].classList.remove("active");
+          }
+        }
+      }
+    </script>
+    <title>Navbar</title>
+  </head>
+  <body>
+    <nav>
+      <ul class="menu">
+        <li class="logo">
+          <a href="#">BillyBudge</a>
+        </li>
+        <li class="nav-item home"><a href="#">Home</a></li>
+        <li class="nav-item about"><a href="#">About</a></li>
+        <li class="nav-item"><a href="#">Products</a></li>
+        <li class="nav-item"><a href="#">Services</a></li>
+        <li class="nav-item button primary"><a href="#">Sign In</a></li>
+        <li class="nav-item button secondary"><a href="#">Register</a></li>
+
+        <li id="menubutton" onclick="menuToggle()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </li>
+      </ul>
+    </nav>
+    <main onclick="menuCollapse()" style="height: 100vh; width: 100%;"></main>
+  </body>
+</html>
